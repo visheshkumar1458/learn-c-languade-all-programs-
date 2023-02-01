@@ -1,0 +1,524 @@
+/* ( program 1 ) .    My first C program to print Hello, World! 
+
+#include <stdio.h>
+int main()
+{
+	printf("Hello, World!");
+
+	return 0;
+} 
+*/
+____________________________________________________________________
+
+/* ( program 2 )                 Basic input/output 
+
+#include <stdio.h>
+int main()
+{
+	int a;
+
+	printf("enter the value ");
+	scanf("%d",&a);
+
+	return 0;
+	}
+*/
+___________________________________________________________________________________________________________________________________
+
+/*  (program 3)                  Basic IO on all data types
+
+#include <stdio.h>
+#include<conio.h>
+int main()
+{
+int m;
+char ch;
+float f;
+
+printf("Enter the number :");
+scanf("%d %c %f",&m,&ch,&f);
+
+printf("%d , %c , %f and ",m,ch,f);
+return 0;
+}
+*/
+_____________________________________________________________________________________________________________________________
+/*   (program 4 )              Perform arithmetic operations
+
+#include <stdio.h>
+#include<conio.h>
+int main()
+{
+int a,b,sum,sub,mul,di,mod;
+
+printf("enter the first no :");
+scanf("%d",&a);
+
+printf("enter the second no :");
+scanf("%d",&b);
+
+sum=a+b;
+sub=a-b;
+mul=a*b;
+di=a/b;
+mod=a%b;
+
+printf("SUM = %d\nSub = %d \n multi = %d \n Div = %d \n Mod = %d \n", sum,sub,mul,di,mod);
+return 0;
+}
+*/
+_____________________________________________________________________________________________________
+
+/*   (program 5) .            find area of rectangle
+
+#include <stdio.h>
+int main()
+{
+    float len, wid, area;
+
+    printf("Enter length of rectangle: ");
+    scanf("%f", &len);
+
+    printf("Enter width of rectangle: ");
+    scanf("%f", &wid);
+
+    area = len * wid;
+
+    printf("Area of rectangle = %f sq. units ", area);
+    return 0;
+}
+*/
+_____________________________________________________________________________________________________
+
+/*   (program 6) .        find area of a triangle if base and height are given
+
+#include <stdio.h>
+int main()
+{
+    float base,height,Area;
+    
+    printf("enter the base : ");
+    scanf("%f",&base);
+
+    printf("enter the height : ");
+    scanf("%f",&height);
+    
+Area=(base * height)/2;
+
+printf("Area of the triangle = %f ", Area);
+}
+*/
+_____________________________________________________________________________________________________
+
+/*   ( program 7)  .       find all angles of a triangle if two angles are given
+
+#include <stdio.h>
+int main()
+{
+int a, b, c;
+
+    printf("Enter first angles of triangle: ");
+    scanf("%d", &a);
+
+    printf("Enter second  angles of triangle: ");
+    scanf("%d", &a);
+    
+    c = 180 - (a + b);
+    printf("angle of the triangle = %d", c);
+    return 0;
+}
+*/
+____________________________________________________________________________________________________-
+
+/*    (program 8) .      convert temperature from degree celsius to fahrenheit
+
+
+#include <stdio.h>
+
+int main()
+{
+    float celsius, fahrenheit;
+
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &celsius);
+
+    fahrenheit = (celsius * 9 / 5) + 32;
+
+    printf("%.2f Celsius = %.2f Fahrenheit", celsius, fahrenheit);
+    return 0;
+}
+*/
+_____________________________________________________________________________________________________
+
+/*    ( program 9 ) .        convert days in to years, weeks and days
+
+#include <stdio.h>
+int main()
+{
+    int day,week,year;
+    
+    printf("Enter day : ");                     // input day from usre 
+    scanf("%d", &day);
+    
+    year = (day / 365);                         // Conversion
+    
+    week = (day % 365) / 7;                     // Ignoring leap year
+    day  = day - ((year * 365) + (week * 7));
+
+    printf("length in days =%d days \n",day);
+    printf("length in week =%d week \n",week);
+    printf("length in year =%d year \n",year);
+    return 0;
+}
+
+*/
+____________________________________________________________________________________________________________________________
+
+/*   ( program 10 ) .           find power of any number
+
+#include <stdio.h>
+#include <math.h>                               //used for power() function
+int main ()
+{
+    double base,expo,power;
+
+    printf("enter first no :");                 //input no fron user
+    scanf("%lf",&base);
+
+    printf("enter  second no :");              //input no fron user
+    scanf("%lf",&expo);
+
+    power=pow(base, expo);                    //coaculate base^expo
+
+    printf("%.2lf ^ %.2lf = %.2lf",base,expo,power);
+    return 0;
+}
+*/
+____________________________________________________________________________________________________________________________
+/*    ( program 11 )          calculate simple interest
+
+#include <stdio.h>
+int main()
+{
+    float principle, time, rate, SI;
+
+    printf("Enter principle (amount): ");   //Input principle
+    scanf("%f", &principle);
+
+    printf("Enter time: ");                 //Input time 
+    scanf("%f", &time);
+
+    printf("Enter rate: ");
+    scanf("%f", &rate);                     //Input rate 
+
+    
+    SI = (principle * time * rate) / 100;     // Calculate simple interest 
+
+    
+    printf("Simple Interest = %f", SI);       // Print the resultant value of SI 
+
+    return 0;
+}
+*/
+____________________________________________________________________________________________________________________________
+/*   ( program 12 )           calculate Compound Interest
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float principle, rate, time, CI;
+
+    printf("Enter principle (amount): ");               // Input principle, time and rate 
+    scanf("%f", &principle);
+
+    printf("Enter time: ");
+    scanf("%f", &time);
+
+    printf("Enter rate: ");
+    scanf("%f", &rate);
+
+    CI = principle* (pow((1 + rate / 100), time));      // Calculate compound interest 
+
+    printf("Compound Interest = %f", CI);              // Print the resultant CI 
+
+    return 0;
+}
+*/
+____________________________________________________________________________________________________________________________
+
+/*       ( program 13 )            find range of data type
+
+#include <stdio.h>
+
+void printUnsignedRange(int bytes)
+{
+    int bits = 8 * bytes;
+    
+    unsigned long long to = (1LLU << (bits - 1)) + ((1LL << (bits - 1)) - 1);;
+    
+    printf(" 0 to %llu\n\n", to);
+}
+
+void printSignedRange(int bytes)
+{
+    int bits = 8 * bytes;
+    
+    long long from  = -(1LL << (bits - 1));
+    long long to    =  (1LL << (bits - 1)) - 1;
+    
+    printf(" %lld to %lld\n\n", from, to);
+}
+
+int main()
+{
+    printf("Range of char =");
+    printSignedRange(sizeof(char));
+    
+    printf("Range of unsigned char =");
+    printUnsignedRange(sizeof(unsigned char));
+    
+    printf("Range of short =");
+    printSignedRange(sizeof(short));
+    
+    printf("Range of unsigned short =");
+    printUnsignedRange(sizeof(unsigned short));
+    
+    printf("Range of int =");
+    printSignedRange(sizeof(int));
+    
+    printf("Range of unsigned int =");
+    printUnsignedRange(sizeof(unsigned int));
+    
+    printf("Range of long =");
+    printSignedRange(sizeof(long));
+    
+    printf("Range of unsigned long =");
+    printUnsignedRange(sizeof(unsigned long));
+    
+    printf("Range of long long =");
+    printSignedRange(sizeof(long long));
+    
+    printf("Range of unsigned long long =");
+    printUnsignedRange(sizeof(unsigned long long));
+    
+    return 0;
+}
+
+*/
+___________________________________________________________________________________________________________________________________
+
+/*   ( program 13)     check Least Significant Bit (LSB) of a number using bitwise operator
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    
+    printf("Enter any number: ");                 //Input number from user 
+    scanf("%d", &num);
+    if(num & 1)                                   // If (num & 1) evaluates to 1 
+        printf("LSB of %d is set (1).", num);  
+    else
+        printf("LSB of %d is unset (0).", num);
+    return 0;
+}
+*/
+___________________________________________________________________________________________________________________________________
+/*  (program 14) .   check Least Significant Bit (LSB) of a number using bitwise operator
+
+#include <stdio.h>
+int main()
+{
+    int num;
+    
+    printf("Enter any number: ");      //Input number from user 
+    scanf("%d", &num);
+
+    
+    if(num & 1)                                     // If (num & 1) evaluates to 1 
+        printf("LSB of %d is set (1).", num);        
+    else
+        printf("LSB of %d is unset (0).", num);
+
+    return 0;
+}
+*/
+___________________________________________________________________________________________________________________________________
+/* (program 15) .   check Most Significant Bit (MSB) of a number using bitwise operator
+
+#include <stdio.h>
+#define BITS sizeof(int) * 8 // Total bits required to represent integer
+
+int main()
+{
+    int num, msb;
+
+    
+    printf("Enter any number: ");               // Input number from user 
+    scanf("%d", &num);
+
+    msb = 1 << (BITS - 1);                     // Move first bit of 1 to highest order 
+
+    if(num & msb)                              //  Perform bitwise AND with msb and num 
+        printf("MSB of %d is set (1).", num);
+    else
+        printf("MSB of %d is unset (0).", num);
+
+    return 0;
+}
+*/
+___________________________________________________________________________________________________________________________________
+/*    (program 16) .        get the nth bit of a number
+
+#include <stdio.h>
+int main()
+{
+    int num, n, newNum;
+
+    
+    printf("Enter any number: ");    // Input number from user 
+    scanf("%d", &num);
+
+    
+    printf("Enter nth bit to toggle (0-31): ");   //Input bit position you want to toggle 
+    scanf("%d", &n);
+    
+    newNum = num ^ (1 << n);        // Left shifts 1, n times
+                                    //then perform bitwise XOR with num
+    
+    printf("Bit toggled successfully.\n\n");
+    printf("Number before toggling %d bit: %d (in decimal)\n", n, num);
+    printf("Number after toggling %d bit: %d (in decimal)\n", n, newNum);
+
+    return 0;
+}
+*/
+___________________________________________________________________________________________________________________________________
+/* (program 17) .     find highest order set bit in a number
+
+#include <stdio.h>
+#define INT_SIZE sizeof(int) * 8            //Integer size in bits 
+
+int main()
+{
+    int num, order = -1, i;
+
+    printf("Enter any number: ");          // Input number from user 
+    scanf("%d", &num);
+
+    for(i=0; i<INT_SIZE; i++)             // Iterate over each bit of integer 
+    { 
+        if((num>>i) & 1)                  // If current bit is set 
+        order = i;
+    }
+
+    if (order != -1)
+        printf("Highest order set bit in %d is %d", num, order);
+    else 
+        printf("0 has no set bits.");
+
+    return 0;
+}
+*/
+_____________________________________________________________________________________________________________________________
+/* ( program 18)                  get lowest order set bit in a number
+
+
+#include <stdio.h>
+#define INT_SIZE sizeof(int) * 8      //Integer size in bits 
+
+int main()
+{
+    int num, order, i;
+
+    printf("Enter any number: ");           //Input number from user 
+    scanf("%d", &num);
+    
+    order = INT_SIZE - 1;                    //Initially set the order to max size of integer 
+
+    for(i=0; i<INT_SIZE; i++)                //Iterate through each bit of integer 
+    {
+        if((num>>i) & 1)                   //If current bit is set 
+        {
+            order = i;
+        
+            break;                         // Terminate the loop 
+        }
+    }
+    
+    printf("Lowest order set bit in %d is %d", num, order);
+
+    return 0;
+}
+*/
+___________________________________________________________________________________________________________________________________
+
+/*
+(program 19)             swap two numbers using bitwise operator
+
+
+#include <stdio.h>
+
+int main()
+{
+    int num1, num2;
+
+    
+    printf("Enter any two numbers: ");            // Input two numbers from user 
+    scanf("%d%d", &num1, &num2);
+
+    printf("Original value of num1 = %d\n", num1);
+    printf("Original value of num2 = %d\n", num2);
+
+    
+    num1 ^= num2;                        // Swap two numbers 
+    num2 ^= num1;
+    num1 ^= num2;                        
+
+    printf("Num1 after swapping = %d\n", num1);
+    printf("Num2 after swapping = %d\n", num2);
+
+    return 0;
+}
+
+*/
+___________________________________________________________________________________________________________________________________
+
+/*
+( program 20) .     check even or odd number using bitwise operator
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("Enter any number: ");           //Input number from user 
+    scanf("%d", &num);
+
+    if(num & 1)
+    {
+        printf("%d is odd.", num);
+    }
+    else
+    {
+        printf("%d is even.", num);
+    }
+
+    return 0;
+}
+*/
+___________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
