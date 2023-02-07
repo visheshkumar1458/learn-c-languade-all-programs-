@@ -1,0 +1,17 @@
+    Basic IO on all data types
+
+#include <stdio.h>
+#include<conio.h>
+int main()
+{
+int m;
+char ch;
+float f;
+
+printf("Enter the number :");
+scanf("%d %c %f",&m,&ch,&f);
+
+printf("%d , %c , %f and ",m,ch,f);
+return 0;
+}
+*/
