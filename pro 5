@@ -1,0 +1,18 @@
+ find area of rectangle
+
+#include <stdio.h>
+int main()
+{
+    float len, wid, area;
+
+    printf("Enter length of rectangle: ");
+    scanf("%f", &len);
+
+    printf("Enter width of rectangle: ");
+    scanf("%f", &wid);
+
+    area = len * wid;
+
+    printf("Area of rectangle = %f sq. units ", area);
+    return 0;
+}
