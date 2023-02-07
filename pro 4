@@ -1,0 +1,23 @@
+ Perform arithmetic operations
+
+#include <stdio.h>
+#include<conio.h>
+int main()
+{
+int a,b,sum,sub,mul,di,mod;
+
+printf("enter the first no :");
+scanf("%d",&a);
+printf("enter the second no :");
+scanf("%d",&b);
+
+sum=a+b;
+sub=a-b;
+mul=a*b;
+di=a/b;
+mod=a%b;
+
+printf("SUM = %d\nSub = %d \n multi = %d \n Div = %d \n Mod = %d \n", sum,sub,mul,di,mod);
+return 0;
+}
+*/
