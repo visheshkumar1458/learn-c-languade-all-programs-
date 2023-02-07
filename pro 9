@@ -1,0 +1,25 @@
+                                convert days in to years, weeks and days
+
+#include <stdio.h>
+
+int main()
+{
+    int day,week,year;
+
+    printf("Enter day : ");                     // input day from usre 
+    scanf("%d", &day);
+
+    year = (day / 365);                         // Conversion
+
+    week = (day % 365) / 7;                     // Ignoring leap year
+    day  = day - ((year * 365) + (week * 7));
+
+    printf("length in days =%d days \n",day);
+    
+    printf("length in week =%d week \n",week);
+    
+    printf("length in year =%d year \n",year);
+    
+    return 0;
+}
+
