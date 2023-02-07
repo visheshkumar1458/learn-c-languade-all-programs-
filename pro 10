@@ -1,0 +1,21 @@
+                       find power of any number
+
+#include <stdio.h>
+
+#include <math.h>                               //used for power() function
+
+int main ()
+{
+    double base,expo,power;
+
+    printf("enter first no :");                 //input no fron user
+    scanf("%lf",&base);
+
+    printf("enter  second no :");              //input no fron user
+    scanf("%lf",&expo);
+
+    power=pow(base, expo);                    //coaculate base^expo
+
+    printf("%.2lf ^ %.2lf = %.2lf",base,expo,power);
+    return 0;
+}
